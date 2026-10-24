@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>WG Münster 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: schmale Leseleiste (Handy zuerst), oben Kopf + Kennzahlen, darunter Filter und Wohnungskarten im Raster */
+:root {
+  --bg: #f3f5f4; --surface: #ffffff; --ink: #17201f; --muted: #5b6764; --line: #d9e0de;
+  --accent: #1f6f78; --brick: #a2442c;
+  --good: #2c7a3f; --good-soft: #e3f2e6; --warn: #9a6a00; --warn-soft: #fbf1d8; --bad: #8a8f8d; --bad-soft: #eceeed;
+  --f-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --r: 14px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #111716; --surface: #1a2221; --ink: #e8eeec; --muted: #9aa8a4; --line: #2c3735;
+  --accent: #5fb7c0; --brick: #e07a5c;
+  --good: #6cc983; --good-soft: #1c3322; --warn: #e2b54a; --warn-soft: #362d14; --bad: #8b9592; --bad-soft: #242b2a;
+  color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: max(28px, env(safe-area-inset-top, 0px)) 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 22px; }
+header { display: grid; gap: 6px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 7vw, 46px); line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+.sub { color: var(--muted); margin: 0; }
+.sub b { color: var(--ink); font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 2px; }
+.stat .n { font-family: var(--f-display); font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.stat .l { font-size: 12.5px; color: var(--muted); }
+.stat.a .n { color: var(--good); }
+@media (max-width: 560px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 7px 13px; border-radius: 999px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.chip:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bar .spacer { flex: 1; }
+.note { font-size: 13px; color: var(--muted); }
+select { font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 7px 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 14px; align-items: start; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.card.A { border-color: var(--good); box-shadow: 0 0 0 1px var(--good) inset; }
+.top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 12.5px; }
+.pill { font-weight: 600; padding: 2px 9px; border-radius: 999px; }
+.pill.A { background: var(--good-soft); color: var(--good); }
+.pill.B { background: var(--warn-soft); color: var(--warn); }
+.pill.X { background: var(--bad-soft); color: var(--bad); }
+.pill.neu { background: var(--accent); color: var(--surface); }
+.portal { color: var(--muted); }
+.when { margin-left: auto; color: var(--muted); }
+.place { font-family: var(--f-display); font-weight: 700; font-size: 21px; line-height: 1.15; margin: 0; overflow-wrap: anywhere; }
+.price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.price .warm { font-family: var(--f-display); font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.price .pp { color: var(--muted); font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; border-block: 1px solid var(--line); padding-block: 10px; }
+.facts div { display: grid; gap: 1px; }
+.facts .k { font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.facts .v { font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.why { margin: 0; color: var(--muted); font-size: 14px; overflow-wrap: anywhere; }
+.warnung { margin: 0; font-size: 13.5px; color: var(--brick); font-weight: 600; }
+.open { justify-self: start; color: var(--accent); font-weight: 600; text-decoration: none; }
+.open:hover { text-decoration: underline; }
+.nolink { color: var(--muted); font-size: 13.5px; }
+.empty { grid-column: 1 / -1; background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 28px 20px; color: var(--muted); text-align: center; }
+.empty strong { color: var(--ink); display: block; font-size: 16px; margin-bottom: 4px; }
+footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Dreier-WG · Sommersemester 2027</div>
+    <h1>WG Münster 2027</h1>
+    <p class="sub">Einzug <b>März bis Mai 2027</b> · Budget <b>500–600 € pro Person</b> alles drin · höchstens <b>15 min Rad zum Schloss</b></p>
+  </header>
+
+  <section class="stats" aria-label="Überblick">
+    <div class="stat a"><span class="n" id="s-a">–</span><span class="l">A-Treffer: sofort anschreiben</span></div>
+    <div class="stat"><span class="n" id="s-b">–</span><span class="l">B-Treffer: passt mit Haken</span></div>
+    <div class="stat"><span class="n" id="s-neu">–</span><span class="l">neu in den letzten 7 Tagen</span></div>
+    <div class="stat"><span class="n" id="s-x">–</span><span class="l">aussortiert</span></div>
+  </section>
+
+  <div class="bar" role="toolbar" aria-label="Filter">
+    <button class="chip" data-f="top" aria-pressed="true">A und B</button>
+    <button class="chip" data-f="A" aria-pressed="false">Nur A</button>
+    <button class="chip" data-f="neu" aria-pressed="false">Neu (7 Tage)</button>
+    <button class="chip" data-f="X" aria-pressed="false">Aussortiert</button>
+    <span class="spacer"></span>
+    <label for="sort" class="note">Sortieren</label>
+    <select id="sort">
+      <option value="score">Beste zuerst</option>
+      <option value="neu">Neueste zuerst</option>
+      <option value="preis">Günstigste zuerst</option>
+    </select>
+  </div>
+
+  <main class="grid" id="list" aria-live="polite">
+    <div class="empty"><strong>Treffer werden geladen</strong>Hier erscheinen die Wohnungen, die der WG-Agent auf WG-Gesucht, Kleinanzeigen, Immowelt und bei LEG findet.</div>
+  </main>
+
+  <footer>
+    <span id="stand"></span>
+    <span>Der WG-Agent prüft stündlich zwischen 7 und 23 Uhr die Suchaufträge und zweimal täglich LEG. Neue Wohnungen tauchen hier von selbst auf.</span>
+    <span>„~“ hinter der Miete heißt geschätzt (Kaltmiete + 3,50 €/m²). Pro Person = Warmmiete durch drei, ohne Strom und Internet.</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  const $ = (s) => document.querySelector(s);
+  const state = { treffer: [], filter: "top", sort: "score" };
+  try { state.sort = localStorage.getItem("wg-sort") || "score"; state.filter = localStorage.getItem("wg-filter") || "top"; } catch (e) {}
+  $("#sort").value = state.sort;
+  const WOCHE = Date.now() - 7 * 864e5;
+  const istNeu = (t) => t.gefunden_am && Date.parse(t.gefunden_am) > WOCHE;
+  const euro = (n) => n == null ? "?" : Math.round(n).toLocaleString("de-DE") + " €";
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const gut = (t) => t.score === "A" || t.score === "B";
+
+  function gefiltert() {
+    let l = state.treffer.slice();
+    if (state.filter === "top") l = l.filter(gut);
+    if (state.filter === "A") l = l.filter((t) => t.score === "A");
+    if (state.filter === "neu") l = l.filter((t) => gut(t) && istNeu(t));
+    if (state.filter === "X") l = l.filter((t) => !gut(t));
+    const rank = { A: 0, B: 1 };
+    if (state.sort === "score") l.sort((a, b) => (rank[a.score] ?? 2) - (rank[b.score] ?? 2) || (a.warm ?? 1e9) - (b.warm ?? 1e9));
+    if (state.sort === "neu") l.sort((a, b) => String(b.gefunden_am).localeCompare(String(a.gefunden_am)));
+    if (state.sort === "preis") l.sort((a, b) => (a.warm ?? 1e9) - (b.warm ?? 1e9));
+    return l;
+  }
+
+  function karte(t) {
+    const sc = gut(t) ? t.score : "X";
+    const c = el("article", "card " + sc);
+    const top = el("div", "top");
+    top.append(el("span", "pill " + sc, sc === "X" ? "Aussortiert" : sc));
+    if (istNeu(t) && sc !== "X") top.append(el("span", "pill neu", "Neu"));
+    top.append(el("span", "portal", t.portal || ""));
+    if (t.gefunden_am) top.append(el("span", "when", "gefunden " + new Date(t.gefunden_am).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" })));
+    c.append(top);
+    c.append(el("h2", "place", t.viertel || t.titel || "Wohnung"));
+    const p = el("div", "price");
+    p.append(el("span", "warm", euro(t.warm) + (t.warm_geschaetzt ? " ~" : "")));
+    if (t.warm) p.append(el("span", "pp", "≈ " + euro(t.warm / 3) + " warm pro Person"));
+    c.append(p);
+    const f = el("div", "facts");
+    const fact = (k, v) => { const d = el("div"); d.append(el("span", "k", k), el("span", "v", v)); f.append(d); };
+    fact("Zimmer · m²", (t.zimmer ?? "?") + " · " + (t.qm ?? "?"));
+    fact("Frei ab", t.frei_ab || "?");
+    fact("Rad zum Schloss", t.rad_min != null ? "~" + t.rad_min + " min" : "?");
+    c.append(f);
+    if (t.warnung) c.append(el("p", "warnung", "Achtung: " + t.warnung));
+    if (t.grund) c.append(el("p", "why", t.grund));
+    if (t.url && /^https:\/\//.test(t.url)) {
+      const a = el("a", "open", "Inserat öffnen ↗"); a.href = t.url; a.target = "_blank"; a.rel = "noopener noreferrer"; c.append(a);
+    } else c.append(el("span", "nolink", "Link steht in Davids Portal-Mail"));
+    return c;
+  }
+
+  function render() {
+    const l = gefiltert(), list = $("#list");
+    list.replaceChildren();
+    if (!state.treffer.length) {
+      const e = el("div", "empty"); e.append(el("strong", null, "Noch keine Treffer"), document.createTextNode("Sobald der WG-Agent eine passende Wohnung findet, steht sie hier.")); list.append(e);
+    } else if (!l.length) {
+      const e = el("div", "empty"); e.append(el("strong", null, "Nichts in diesem Filter"), document.createTextNode("Wähle oben einen anderen Filter.")); list.append(e);
+    } else l.forEach((t) => list.append(karte(t)));
+    $("#s-a").textContent = state.treffer.filter((t) => t.score === "A").length;
+    $("#s-b").textContent = state.treffer.filter((t) => t.score === "B").length;
+    $("#s-neu").textContent = state.treffer.filter((t) => gut(t) && istNeu(t)).length;
+    $("#s-x").textContent = state.treffer.filter((t) => !gut(t)).length;
+    document.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === state.filter ? "true" : "false"));
+  }
+
+  document.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => {
+    state.filter = b.dataset.f; try { localStorage.setItem("wg-filter", state.filter); } catch (e) {} render();
+  }));
+  $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; try { localStorage.setItem("wg-sort", state.sort); } catch (x) {} render(); });
+
+  fetch("treffer.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
+    state.treffer = d.treffer || [];
+    if (d.aktualisiert) $("#stand").textContent = "Stand: " + new Date(d.aktualisiert).toLocaleString("de-DE", { dateStyle: "medium", timeStyle: "short" });
+    render();
+  }).catch(() => {
+    const e = el("div", "empty"); e.append(el("strong", null, "Treffer konnten nicht geladen werden"), document.createTextNode("Seite bitte neu laden."));
+    $("#list").replaceChildren(e);
+  });
+})();
+</script>
+</body>
+</html>
