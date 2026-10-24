@@ -89,19 +89,19 @@
    "url": "https://www.immobilienscout24.de/expose/170192117",
    "portal": "ImmoScout24",
    "titel": "4-Zimmer-Wohnung, Niesertstraße 18, Mauritz",
-   "viertel": "Mauritz (Niesertstraße)",
+   "viertel": "Mauritz-Mitte (Niesertstraße 18)",
    "zimmer": 4,
    "qm": 90,
    "warm": 1700,
    "warm_geschaetzt": false,
-   "frei_ab": null,
+   "frei_ab": "01.11.2026",
    "rad_min": 12,
-   "score": "A",
-   "grund": "⭐ Unser Favorit. 3 Schlafzimmer plus Wohnzimmer, 2024/25 saniert, Parkett, befristet bis Dez. 2029. Warm 1.700 € (Heizung inkl.), also knapp über dem Limit. Ob eine WG erlaubt ist, steht nicht im Inserat. Daten vom 19.10.2026, nicht neu geprüft.",
+   "score": "B",
+   "grund": "⭐ Unser Favorit, Inserat am 24.10. noch online. 3 Schlafzimmer + Wohnzimmer, 1. OG, Balkon, Einbauküche, saniert 2024/25, Parkett, Energieklasse A, befristet bis 31.12.2029. 1.500 € kalt + 200 € NK inkl. Heizung = 1.700 € warm (50 € über Limit), Kaution 2.000 €, privater Vermieter. Haken: frei ab 01.11.2026 und der Vermieter wünscht sich „eine Person oder ein Paar“, also keine WG.",
    "warnung": "",
    "id": "favorit-170192117",
    "gefunden_am": "2026-10-19T12:00:00+02:00"
   }
  ],
- "aktualisiert": "2026-10-24T21:05:18+02:00"
+ "aktualisiert": "2026-10-24T21:09:42+02:00"
 }
