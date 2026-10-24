@@ -35,18 +35,18 @@
    "id": "d63b64c81c7d067d"
   },
   {
-   "frei_ab": null,
+   "frei_ab": "01.11.2026",
    "gefunden_am": "2026-10-24T18:56:00+02:00",
-   "grund": "Zentrale Lage, 3 Zimmer. Ob 1.350 € kalt oder warm sind, ist unklar; als Kaltmiete geschätzt ergibt sich eine Warmmiete von etwa 1.627 €, also knapp unter dem Limit. Datum und Befristung fehlen. Die Mail nennt keine Einzel-URL.",
+   "grund": "Laut Exposé: 1.350 € kalt, 1.600 € warm, teilmöbliert, Balkon. Aber „Wohngemeinschaften sind nicht gewünscht“ und frei ab 01.11.2026, also zu früh. Für uns raus.",
    "portal": "immowelt",
    "qm": 79,
-   "rad_min": null,
-   "score": "B",
+   "rad_min": 5,
+   "score": "X",
    "titel": "Wohnung zur Miete, 3 Zimmer, Centrum",
-   "url": null,
-   "viertel": "Centrum",
-   "warm": 1627,
-   "warm_geschaetzt": true,
+   "url": "https://www.immowelt.de/expose/92d24220-e150-4457-8d23-1b25516e17d6",
+   "viertel": "Kreuzviertel (Kerßenbrockstraße)",
+   "warm": 1600,
+   "warm_geschaetzt": false,
    "warnung": "",
    "zimmer": 3,
    "id": "f49e5e3971172851"
@@ -86,5 +86,5 @@
    "id": "af5bb246079fb781"
   }
  ],
- "aktualisiert": "2026-10-24T20:59:08+02:00"
+ "aktualisiert": "2026-10-24T21:02:12+02:00"
 }
