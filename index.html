@@ -164,7 +164,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     if (t.grund) c.append(el("p", "why", t.grund));
     if (t.url && /^https:\/\//.test(t.url)) {
       const a = el("a", "open", "Inserat öffnen ↗"); a.href = t.url; a.target = "_blank"; a.rel = "noopener noreferrer"; c.append(a);
-    } else c.append(el("span", "nolink", "Link steht in Davids Portal-Mail"));
+    } else c.append(el("span", "nolink", "Link steht in der Portal-Mail"));
     return c;
   }
 
