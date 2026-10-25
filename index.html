@@ -185,8 +185,11 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   }
   function favorit(t, an, knopf) {
     knopf.disabled = true;
-    sb("rpc/favorit", { method: "POST", body: JSON.stringify({ p_id: t.id, p_pin: PIN, p_an: an }) })
-      .then(laden).then(render).catch(() => { knopf.disabled = false; alert("Hat nicht geklappt (PIN falsch oder keine Verbindung)."); });
+    // Favoriten darf jeder setzen und entfernen
+    const req = an
+      ? sb("favoriten?on_conflict=treffer_id", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" }, body: JSON.stringify({ treffer_id: t.id }) })
+      : sb("favoriten?treffer_id=eq." + encodeURIComponent(t.id), { method: "DELETE" });
+    req.then(laden).then(render).catch(() => { knopf.disabled = false; alert("Favorit konnte nicht gespeichert werden. Bitte nochmal versuchen."); });
   }
   function kicken(t, raus, knopf) {
     knopf.disabled = true;
@@ -268,11 +271,11 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     };
     const dafuer = ja(t), dagegen = nein(t);
     v.append(knopf("ja", "👍 Dafür · " + dafuer.length, 1), knopf("nein", "👎 Dagegen · " + dagegen.length, -1));
+    const an = state.fav.has(t.id);
+    const st = el("button", "vbtn star", an ? "★ Favorit" : "☆ Favorit"); st.type = "button";
+    st.setAttribute("aria-pressed", an ? "true" : "false");
+    st.addEventListener("click", () => favorit(t, !an, st)); v.append(st);
     if (PIN) {
-      const an = state.fav.has(t.id);
-      const st = el("button", "vbtn star", an ? "★ Favorit" : "☆ Favorit"); st.type = "button";
-      st.setAttribute("aria-pressed", an ? "true" : "false");
-      st.addEventListener("click", () => favorit(t, !an, st)); v.append(st);
       const raus = state.raus.has(t.id);
       const k = el("button", "vbtn kick", raus ? "↩︎ Zurückholen" : "✕ Rauskicken"); k.type = "button";
       k.addEventListener("click", () => kicken(t, !raus, k)); v.append(k);
