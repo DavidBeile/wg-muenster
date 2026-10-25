@@ -73,6 +73,16 @@ select { font: inherit; font-size: 14px; color: var(--ink); background: var(--su
 .empty { grid-column: 1 / -1; background: var(--surface); border: 1px dashed var(--line); border-radius: var(--r); padding: 28px 20px; color: var(--muted); text-align: center; }
 .empty strong { color: var(--ink); display: block; font-size: 16px; margin-bottom: 4px; }
 footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
+.vote { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.vbtn { font: inherit; font-size: 14px; font-weight: 600; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  min-height: 40px; padding: 6px 12px; border-radius: 10px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.vbtn[aria-pressed="true"].ja { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+.vbtn[aria-pressed="true"].nein { background: var(--bad-soft); border-color: var(--bad); color: var(--ink); }
+.vbtn.kick { margin-left: auto; color: var(--brick); border-color: transparent; background: transparent; }
+.vbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.vbtn:disabled { opacity: .5; cursor: progress; }
+.wer { font-size: 13px; color: var(--muted); width: 100%; }
+.ich { font: inherit; font-size: 13px; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -110,6 +120,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 
   <footer>
     <span id="stand"></span>
+    <span id="ich-zeile" hidden>Du stimmst ab als <b id="ich-name"></b> · <button class="ich" id="ich-aendern" type="button">Name ändern</button></span>
     <span>Der WG-Agent prüft stündlich zwischen 7 und 23 Uhr die Suchaufträge und zweimal täglich LEG. Neue Wohnungen tauchen hier von selbst auf.</span>
     <span>„~“ hinter der Miete heißt geschätzt (Kaltmiete + 3,50 €/m²). Pro Person = Warmmiete durch drei, ohne Strom und Internet.</span>
   </footer>
@@ -117,24 +128,79 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
 
 <script>
 (function () {
+  // Supabase (oeffentlicher Schluessel, Schreibrechte regelt die Datenbank). Leer = keine Buttons.
+  const SB_URL = "https://bsvgijvjfzieacjfvgoy.supabase.co";
+  const SB_KEY = "sb_publishable_I3x5TcvVmXeOLn16lF419w_ZPn0cg-Q";
   const $ = (s) => document.querySelector(s);
-  const state = { treffer: [], filter: "top", sort: "score" };
+  const state = { treffer: [], filter: "top", sort: "score", stimmen: [], raus: new Set(), online: false };
+  const lies = (k) => { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } };
+  const merke = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} };
+  // Davids Admin-Link (#admin=PIN) schaltet "Rauskicken" frei; PIN bleibt nur in seinem Browser
+  const m = location.hash.match(/admin=([\w-]+)/);
+  if (m) { merke("wg-admin", m[1]); history.replaceState(null, "", location.pathname + location.search); }
+  const PIN = lies("wg-admin");
+
+  function sb(pfad, opt) {
+    return fetch(SB_URL + "/rest/v1/" + pfad, Object.assign({}, opt, { headers: Object.assign({
+      apikey: SB_KEY, Authorization: "Bearer " + SB_KEY, "Content-Type": "application/json" }, (opt || {}).headers) }))
+      .then((r) => { if (!r.ok) return r.text().then((t) => { throw new Error(t || r.status); }); return r.status === 204 ? null : r.json(); });
+  }
+  function laden() {
+    if (!SB_URL) return Promise.resolve();
+    return Promise.all([sb("stimmen?select=treffer_id,person,wert"), sb("rausgekickt?select=treffer_id")])
+      .then(([s, r]) => { state.stimmen = s; state.raus = new Set(r.map((x) => x.treffer_id)); state.online = true; })
+      .catch(() => { state.online = false; });
+  }
+  function name() {
+    let n = lies("wg-name");
+    if (!n) {
+      n = (prompt("Wie heißt du? (für die Abstimmung)") || "").trim().slice(0, 30);
+      if (n) merke("wg-name", n);
+    }
+    zeigeIch();
+    return n;
+  }
+  function zeigeIch() {
+    const n = lies("wg-name");
+    $("#ich-zeile").hidden = !n || !state.online;
+    $("#ich-name").textContent = n;
+  }
+  function stimme(t, wert, knopf) {
+    const n = name(); if (!n) return;
+    const alt = state.stimmen.find((s) => s.treffer_id === t.id && s.person === n);
+    const q = "treffer_id=eq." + encodeURIComponent(t.id) + "&person=eq." + encodeURIComponent(n);
+    const req = alt && alt.wert === wert
+      ? sb("stimmen?" + q, { method: "DELETE" })   // nochmal klicken = Stimme zuruecknehmen
+      : sb("stimmen?on_conflict=treffer_id,person", { method: "POST", headers: { Prefer: "resolution=merge-duplicates" },
+          body: JSON.stringify({ treffer_id: t.id, person: n, wert: wert, geaendert: new Date().toISOString() }) });
+    knopf.disabled = true;
+    req.then(laden).then(render).catch(() => { knopf.disabled = false; alert("Stimme konnte nicht gespeichert werden. Bitte nochmal versuchen."); });
+  }
+  function kicken(t, raus, knopf) {
+    knopf.disabled = true;
+    sb("rpc/rauskicken", { method: "POST", body: JSON.stringify({ p_id: t.id, p_pin: PIN, p_raus: raus }) })
+      .then(laden).then(render).catch(() => { knopf.disabled = false; alert("Hat nicht geklappt (PIN falsch oder keine Verbindung)."); });
+  }
   try { state.sort = localStorage.getItem("wg-sort") || "score"; state.filter = localStorage.getItem("wg-filter") || "top"; } catch (e) {}
   $("#sort").value = state.sort;
   const WOCHE = Date.now() - 7 * 864e5;
   const istNeu = (t) => t.gefunden_am && Date.parse(t.gefunden_am) > WOCHE;
   const euro = (n) => n == null ? "?" : Math.round(n).toLocaleString("de-DE") + " €";
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-  const gut = (t) => t.score === "A" || t.score === "B";
+  const gut = (t) => (t.score === "A" || t.score === "B") && !state.raus.has(t.id);
+  const ja = (t) => state.stimmen.filter((s) => s.treffer_id === t.id && s.wert === 1);
+  const nein = (t) => state.stimmen.filter((s) => s.treffer_id === t.id && s.wert === -1);
 
   function gefiltert() {
     let l = state.treffer.slice();
     if (state.filter === "top") l = l.filter(gut);
-    if (state.filter === "A") l = l.filter((t) => t.score === "A");
+    if (state.filter === "A") l = l.filter((t) => gut(t) && t.score === "A");
     if (state.filter === "neu") l = l.filter((t) => gut(t) && istNeu(t));
     if (state.filter === "X") l = l.filter((t) => !gut(t));
     const rank = { A: 0, B: 1 };
-    if (state.sort === "score") l.sort((a, b) => (rank[a.score] ?? 2) - (rank[b.score] ?? 2) || (a.warm ?? 1e9) - (b.warm ?? 1e9));
+    // Beste zuerst: Score, dann eure Stimmen (dafuer minus dagegen), dann Preis
+    const punkte = (t) => ja(t).length - nein(t).length;
+    if (state.sort === "score") l.sort((a, b) => (rank[a.score] ?? 2) - (rank[b.score] ?? 2) || punkte(b) - punkte(a) || (a.warm ?? 1e9) - (b.warm ?? 1e9));
     if (state.sort === "neu") l.sort((a, b) => String(b.gefunden_am).localeCompare(String(a.gefunden_am)));
     if (state.sort === "preis") l.sort((a, b) => (a.warm ?? 1e9) - (b.warm ?? 1e9));
     return l;
@@ -144,7 +210,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     const sc = gut(t) ? t.score : "X";
     const c = el("article", "card " + sc);
     const top = el("div", "top");
-    top.append(el("span", "pill " + sc, sc === "X" ? "Aussortiert" : sc));
+    top.append(el("span", "pill " + sc, state.raus.has(t.id) ? "Rausgekickt" : sc === "X" ? "Aussortiert" : sc));
     if (istNeu(t) && sc !== "X") top.append(el("span", "pill neu", "Neu"));
     top.append(el("span", "portal", t.portal || ""));
     if (t.gefunden_am) top.append(el("span", "when", "gefunden " + new Date(t.gefunden_am).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" })));
@@ -165,7 +231,29 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     if (t.url && /^https:\/\//.test(t.url)) {
       const a = el("a", "open", "Inserat öffnen ↗"); a.href = t.url; a.target = "_blank"; a.rel = "noopener noreferrer"; c.append(a);
     } else c.append(el("span", "nolink", "Link steht in der Portal-Mail"));
+    if (state.online) c.append(abstimmung(t));
     return c;
+  }
+
+  function abstimmung(t) {
+    const v = el("div", "vote"), ich = lies("wg-name");
+    const meine = state.stimmen.find((s) => s.treffer_id === t.id && s.person === ich);
+    const knopf = (cls, text, wert) => {
+      const b = el("button", "vbtn " + cls, text); b.type = "button";
+      b.setAttribute("aria-pressed", meine && meine.wert === wert ? "true" : "false");
+      b.addEventListener("click", () => stimme(t, wert, b)); return b;
+    };
+    const dafuer = ja(t), dagegen = nein(t);
+    v.append(knopf("ja", "👍 Dafür · " + dafuer.length, 1), knopf("nein", "👎 Dagegen · " + dagegen.length, -1));
+    if (PIN) {
+      const raus = state.raus.has(t.id);
+      const k = el("button", "vbtn kick", raus ? "↩︎ Zurückholen" : "✕ Rauskicken"); k.type = "button";
+      k.addEventListener("click", () => kicken(t, !raus, k)); v.append(k);
+    }
+    const namen = [dafuer.length && "Dafür: " + dafuer.map((s) => s.person).join(", "),
+                   dagegen.length && "Dagegen: " + dagegen.map((s) => s.person).join(", ")].filter(Boolean).join(" · ");
+    if (namen) v.append(el("span", "wer", namen));
+    return v;
   }
 
   function render() {
@@ -176,8 +264,9 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     } else if (!l.length) {
       const e = el("div", "empty"); e.append(el("strong", null, "Nichts in diesem Filter"), document.createTextNode("Wähle oben einen anderen Filter.")); list.append(e);
     } else l.forEach((t) => list.append(karte(t)));
-    $("#s-a").textContent = state.treffer.filter((t) => t.score === "A").length;
-    $("#s-b").textContent = state.treffer.filter((t) => t.score === "B").length;
+    $("#s-a").textContent = state.treffer.filter((t) => gut(t) && t.score === "A").length;
+    $("#s-b").textContent = state.treffer.filter((t) => gut(t) && t.score === "B").length;
+    zeigeIch();
     $("#s-neu").textContent = state.treffer.filter((t) => gut(t) && istNeu(t)).length;
     $("#s-x").textContent = state.treffer.filter((t) => !gut(t)).length;
     document.querySelectorAll(".chip").forEach((b) => b.setAttribute("aria-pressed", b.dataset.f === state.filter ? "true" : "false"));
@@ -188,7 +277,9 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   }));
   $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; try { localStorage.setItem("wg-sort", state.sort); } catch (x) {} render(); });
 
-  fetch("treffer.json", { cache: "no-store" }).then((r) => r.json()).then((d) => {
+  $("#ich-aendern").addEventListener("click", () => { merke("wg-name", ""); name(); render(); });
+
+  Promise.all([fetch("treffer.json", { cache: "no-store" }).then((r) => r.json()), laden()]).then(([d]) => {
     state.treffer = d.treffer || [];
     if (d.aktualisiert) $("#stand").textContent = "Stand: " + new Date(d.aktualisiert).toLocaleString("de-DE", { dateStyle: "medium", timeStyle: "short" });
     render();
