@@ -78,6 +78,12 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   min-height: 40px; padding: 6px 12px; border-radius: 10px; cursor: pointer; font-variant-numeric: tabular-nums; }
 .vbtn[aria-pressed="true"].ja { background: var(--good-soft); border-color: var(--good); color: var(--good); }
 .vbtn[aria-pressed="true"].nein { background: var(--bad-soft); border-color: var(--bad); color: var(--ink); }
+.card.fav { border-color: var(--warn); box-shadow: 0 0 0 1px var(--warn) inset; }
+.pill.fav { background: var(--warn-soft); color: var(--warn); }
+.foto { margin: -16px -16px 0; aspect-ratio: 16 / 9; background: var(--bad-soft); border-radius: var(--r) var(--r) 0 0; overflow: hidden; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vbtn.star { color: var(--warn); }
+.vbtn.star[aria-pressed="true"] { background: var(--warn-soft); border-color: var(--warn); }
 .vbtn.kick { margin-left: auto; color: var(--brick); border-color: transparent; background: transparent; }
 .vbtn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .vbtn:disabled { opacity: .5; cursor: progress; }
@@ -94,17 +100,17 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   </header>
 
   <section class="stats" aria-label="Überblick">
-    <div class="stat a"><span class="n" id="s-a">–</span><span class="l">A-Treffer: sofort anschreiben</span></div>
-    <div class="stat"><span class="n" id="s-b">–</span><span class="l">B-Treffer: passt mit Haken</span></div>
+    <div class="stat a"><span class="n" id="s-a">–</span><span class="l">🟢 Top: passt, sofort anschreiben</span></div>
+    <div class="stat"><span class="n" id="s-b">–</span><span class="l">🟡 Mit Haken: passt fast, ein Punkt stört</span></div>
     <div class="stat"><span class="n" id="s-neu">–</span><span class="l">neu in den letzten 7 Tagen</span></div>
-    <div class="stat"><span class="n" id="s-x">–</span><span class="l">aussortiert</span></div>
+    <div class="stat"><span class="n" id="s-x">–</span><span class="l">⚪ Passt nicht</span></div>
   </section>
 
   <div class="bar" role="toolbar" aria-label="Filter">
-    <button class="chip" data-f="top" aria-pressed="true">A und B</button>
-    <button class="chip" data-f="A" aria-pressed="false">Nur A</button>
+    <button class="chip" data-f="top" aria-pressed="true">Alle passenden</button>
+    <button class="chip" data-f="A" aria-pressed="false">Nur Top</button>
     <button class="chip" data-f="neu" aria-pressed="false">Neu (7 Tage)</button>
-    <button class="chip" data-f="X" aria-pressed="false">Aussortiert</button>
+    <button class="chip" data-f="X" aria-pressed="false">Passt nicht</button>
     <span class="spacer"></span>
     <label for="sort" class="note">Sortieren</label>
     <select id="sort">
@@ -132,7 +138,7 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   const SB_URL = "https://bsvgijvjfzieacjfvgoy.supabase.co";
   const SB_KEY = "sb_publishable_I3x5TcvVmXeOLn16lF419w_ZPn0cg-Q";
   const $ = (s) => document.querySelector(s);
-  const state = { treffer: [], filter: "top", sort: "score", stimmen: [], raus: new Set(), online: false };
+  const state = { treffer: [], filter: "top", sort: "score", stimmen: [], raus: new Set(), fav: new Set(), online: false };
   const lies = (k) => { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } };
   const merke = (k, v) => { try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch (e) {} };
   // Davids Admin-Link (#admin=PIN) schaltet "Rauskicken" frei; PIN bleibt nur in seinem Browser
@@ -148,8 +154,8 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   }
   function laden() {
     if (!SB_URL) return Promise.resolve();
-    return Promise.all([sb("stimmen?select=treffer_id,person,wert"), sb("rausgekickt?select=treffer_id")])
-      .then(([s, r]) => { state.stimmen = s; state.raus = new Set(r.map((x) => x.treffer_id)); state.online = true; })
+    return Promise.all([sb("stimmen?select=treffer_id,person,wert"), sb("rausgekickt?select=treffer_id"), sb("favoriten?select=treffer_id")])
+      .then(([s, r, f]) => { state.stimmen = s; state.raus = new Set(r.map((x) => x.treffer_id)); state.fav = new Set(f.map((x) => x.treffer_id)); state.online = true; })
       .catch(() => { state.online = false; });
   }
   function name() {
@@ -177,6 +183,11 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     knopf.disabled = true;
     req.then(laden).then(render).catch(() => { knopf.disabled = false; alert("Stimme konnte nicht gespeichert werden. Bitte nochmal versuchen."); });
   }
+  function favorit(t, an, knopf) {
+    knopf.disabled = true;
+    sb("rpc/favorit", { method: "POST", body: JSON.stringify({ p_id: t.id, p_pin: PIN, p_an: an }) })
+      .then(laden).then(render).catch(() => { knopf.disabled = false; alert("Hat nicht geklappt (PIN falsch oder keine Verbindung)."); });
+  }
   function kicken(t, raus, knopf) {
     knopf.disabled = true;
     sb("rpc/rauskicken", { method: "POST", body: JSON.stringify({ p_id: t.id, p_pin: PIN, p_raus: raus }) })
@@ -188,14 +199,17 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
   const istNeu = (t) => t.gefunden_am && Date.parse(t.gefunden_am) > WOCHE;
   const euro = (n) => n == null ? "?" : Math.round(n).toLocaleString("de-DE") + " €";
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const LABEL = { A: "🟢 Top", B: "🟡 Mit Haken", X: "⚪ Passt nicht" };
   const gut = (t) => (t.score === "A" || t.score === "B") && !state.raus.has(t.id);
   const ja = (t) => state.stimmen.filter((s) => s.treffer_id === t.id && s.wert === 1);
   const nein = (t) => state.stimmen.filter((s) => s.treffer_id === t.id && s.wert === -1);
 
   function gefiltert() {
     let l = state.treffer.slice();
-    if (state.filter === "top") l = l.filter(gut);
-    if (state.filter === "A") l = l.filter((t) => gut(t) && t.score === "A");
+    // Favoriten stehen in "Alle passenden" und "Nur Top" immer drin, egal wie bewertet
+    const fav = (t) => state.fav.has(t.id) && !state.raus.has(t.id);
+    if (state.filter === "top") l = l.filter((t) => gut(t) || fav(t));
+    if (state.filter === "A") l = l.filter((t) => (gut(t) && t.score === "A") || fav(t));
     if (state.filter === "neu") l = l.filter((t) => gut(t) && istNeu(t));
     if (state.filter === "X") l = l.filter((t) => !gut(t));
     const rank = { A: 0, B: 1 };
@@ -204,14 +218,22 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     if (state.sort === "score") l.sort((a, b) => (rank[a.score] ?? 2) - (rank[b.score] ?? 2) || punkte(b) - punkte(a) || (a.warm ?? 1e9) - (b.warm ?? 1e9));
     if (state.sort === "neu") l.sort((a, b) => String(b.gefunden_am).localeCompare(String(a.gefunden_am)));
     if (state.sort === "preis") l.sort((a, b) => (a.warm ?? 1e9) - (b.warm ?? 1e9));
-    return l;
+    return l.filter(fav).concat(l.filter((t) => !fav(t)));  // Favoriten ganz nach oben
   }
 
   function karte(t) {
     const sc = gut(t) ? t.score : "X";
-    const c = el("article", "card " + sc);
+    const istFav = state.fav.has(t.id) && !state.raus.has(t.id);
+    const c = el("article", "card " + sc + (istFav ? " fav" : ""));
+    if (t.bild && /^https:\/\//.test(t.bild)) {
+      const f = el("div", "foto"), img = el("img");
+      img.src = t.bild; img.alt = ""; img.loading = "lazy"; img.referrerPolicy = "no-referrer";
+      img.addEventListener("error", () => f.remove());  // Bild weg oder gesperrt: Karte ohne Bild
+      f.append(img); c.append(f);
+    }
     const top = el("div", "top");
-    top.append(el("span", "pill " + sc, state.raus.has(t.id) ? "Rausgekickt" : sc === "X" ? "Aussortiert" : sc));
+    if (istFav) top.append(el("span", "pill fav", "⭐ Favorit"));
+    top.append(el("span", "pill " + sc, state.raus.has(t.id) ? "Rausgekickt" : LABEL[sc]));
     if (istNeu(t) && sc !== "X") top.append(el("span", "pill neu", "Neu"));
     top.append(el("span", "portal", t.portal || ""));
     if (t.gefunden_am) top.append(el("span", "when", "gefunden " + new Date(t.gefunden_am).toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit" })));
@@ -247,6 +269,10 @@ footer { color: var(--muted); font-size: 13px; display: grid; gap: 4px; }
     const dafuer = ja(t), dagegen = nein(t);
     v.append(knopf("ja", "👍 Dafür · " + dafuer.length, 1), knopf("nein", "👎 Dagegen · " + dagegen.length, -1));
     if (PIN) {
+      const an = state.fav.has(t.id);
+      const st = el("button", "vbtn star", an ? "★ Favorit" : "☆ Favorit"); st.type = "button";
+      st.setAttribute("aria-pressed", an ? "true" : "false");
+      st.addEventListener("click", () => favorit(t, !an, st)); v.append(st);
       const raus = state.raus.has(t.id);
       const k = el("button", "vbtn kick", raus ? "↩︎ Zurückholen" : "✕ Rauskicken"); k.type = "button";
       k.addEventListener("click", () => kicken(t, !raus, k)); v.append(k);

@@ -49,7 +49,8 @@
    "warm_geschaetzt": false,
    "warnung": "",
    "zimmer": 3,
-   "id": "f49e5e3971172851"
+   "id": "f49e5e3971172851",
+   "bild": "https://mms.immowelt.de/1/a/e/7/1ae78ea8-a6fc-49d4-a03b-fa4655b84385.jpg"
   },
   {
    "frei_ab": null,
@@ -97,13 +98,14 @@
    "frei_ab": "01.11.2026",
    "rad_min": 12,
    "score": "B",
-   "grund": "⭐ Unser Favorit, Inserat am 24.10. noch online. 3 Schlafzimmer + Wohnzimmer, 1. OG, Balkon, Einbauküche, saniert 2024/25, Parkett, Energieklasse A, befristet bis 31.12.2029. 1.500 € kalt + 200 € NK inkl. Heizung = 1.700 € warm (50 € über Limit), Kaution 2.000 €, privater Vermieter. Haken: frei ab 01.11.2026 und der Vermieter wünscht sich „eine Person oder ein Paar“, also keine WG.",
+   "grund": "Inserat am 24.10. noch online. 3 Schlafzimmer + Wohnzimmer, 1. OG, Balkon, Einbauküche, saniert 2024/25, Parkett, Energieklasse A, befristet bis 31.12.2029. 1.500 € kalt + 200 € NK inkl. Heizung = 1.700 € warm (50 € über Limit), Kaution 2.000 €, privater Vermieter. Haken: frei ab 01.11.2026 und der Vermieter wünscht sich „eine Person oder ein Paar“, also keine WG.",
    "warnung": "",
    "id": "favorit-170192117",
-   "gefunden_am": "2026-10-19T12:00:00+02:00"
+   "gefunden_am": "2026-10-19T12:00:00+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/3e3bcc68-f316-4a20-8003-ea63aa5a6a29-2078678880.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/98798828?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_repush&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/98798828",
    "portal": "ImmoScout24",
    "titel": "Wohnen am Edelbach! KFW 55, 3-Zimmer",
    "viertel": "Coerde",
@@ -117,10 +119,11 @@
    "grund": "Coerde ist ein Grenzfall bei der Radstrecke; Warmmiete 1.640 € liegt knapp unter dem Limit.",
    "warnung": "",
    "id": "af4c3aa6fb1dcd75",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/f6f27e39-17f9-4f5e-a417-b995c18accc5-1300646033.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171992919?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171992919",
    "portal": "ImmoScout24",
    "titel": "voll möblierte 3-Zimmer-Wohnung mit Balkon, Garten und Homeoffice, Feb. 2027 bis Feb. 2028",
    "viertel": "Schützenhof",
@@ -134,10 +137,11 @@
    "grund": "Befristet nur bis Feb. 2028 (Wohndauer soll bis Ende 2028 gehen), Lage Schützenhof ist unklar und Fahrzeit nicht sicher ableitbar.",
    "warnung": "",
    "id": "efc8cf16f2740b0d",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/6e923df6-a3b1-4e5e-a1ae-a1f119938ef7-2116818268.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171953509?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171953509",
    "portal": "ImmoScout24",
    "titel": "Helle 3-ZKBB am Kanal",
    "viertel": "Mauritz-Ost",
@@ -151,10 +155,11 @@
    "grund": "Mauritz-Ost ist ein Grenzfall bei der Radstrecke; Warmmiete 1.615 € im Rahmen.",
    "warnung": "",
    "id": "e0f6fc385543769e",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/e8d75897-e4a6-453b-8a58-cecc7d19377b-2116024416.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/170108597?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/170108597",
    "portal": "ImmoScout24",
    "titel": "Gepflegte Etagenwohnung zur Miete in Münster - Wentzel Dr.",
    "viertel": "Aaseestadt",
@@ -168,10 +173,11 @@
    "grund": "Aaseestadt, 3 Zimmer, 1.199 € warm, Datum unbekannt: sofort anschreiben.",
    "warnung": "",
    "id": "ed403fd71664a6a5",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/cebf15bb-5447-4e8b-9cf3-55e2f0b357d5-2076938785.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171945600?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171945600",
    "portal": "ImmoScout24",
    "titel": "Wohnen mit Charakter: 3-Zimmer-Dachgeschosswohnung in Münster-Roxel",
    "viertel": "Roxel",
@@ -185,10 +191,11 @@
    "grund": "Roxel ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "cc4f11228160536f",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/6601bf47-12db-4935-93c5-4213049b7976-2116453374.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171709392?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171709392",
    "portal": "ImmoScout24",
    "titel": "3-Zimmer-Dachgeschosswohnung mit Balkon im beliebten Hansaviertel",
    "viertel": "Hansaviertel",
@@ -202,10 +209,11 @@
    "grund": "Hansaviertel (Hafen-Bonus), 3 Zimmer, Warmmiete genau am Limit von 1.650 €, Datum unbekannt.",
    "warnung": "",
    "id": "44db938ee8a3b20d",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/59be3f60-490a-4f05-b435-2e1172ac8047-2116131757.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171900181?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171900181",
    "portal": "ImmoScout24",
    "titel": "Moderne und helle 3-Zimmer-Wohnung",
    "viertel": "Mauritz-Ost",
@@ -219,10 +227,11 @@
    "grund": "Mauritz-Ost ist ein Grenzfall bei der Radstrecke; Warmmiete 1.624 € im Rahmen.",
    "warnung": "",
    "id": "5a11ebd7c2a1470f",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/c0cc100e-6151-4d86-a1d4-b9f7b2ecb7f2-2114931326.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171109874?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_repush&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171109874",
    "portal": "ImmoScout24",
    "titel": "Münster-Albachten: Barrierearme 3-Zimmer-Dachgeschosswohnung als Erstbezug m. Balkon & TG-Stellplatz",
    "viertel": "Albachten",
@@ -236,10 +245,11 @@
    "grund": "Albachten ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "c7ca8b31aaa76c09",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/15ad8350-63f8-4d91-882f-d4b87901c069-2098172499.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/169179908?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/169179908",
    "portal": "ImmoScout24",
    "titel": "Mitten im schönen Kreuzviertel, 3-Zimmerwohnung",
    "viertel": "Kreuzviertel",
@@ -253,10 +263,11 @@
    "grund": "Kreuzviertel (Bonus), 3 Zimmer, 1.325 € warm, Datum unbekannt: sofort anschreiben.",
    "warnung": "",
    "id": "cffd4908f4c733ac",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/d274a81a-2a5a-4f66-867f-1d722b32ae3f-2056742863.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171956029?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171956029",
    "portal": "ImmoScout24",
    "titel": "Münster-Kinderhaus, helle, großzügige 2 Personenwohnung, 3 Zimmer, 2 Bäder, mit Aufzug zu vermieten",
    "viertel": "Kinderhaus-Ost",
@@ -270,10 +281,11 @@
    "grund": "Kinderhaus ist zu weit; die Wohnung ist außerdem als Zwei-Personen-Wohnung angeboten.",
    "warnung": "",
    "id": "5d916eaa8ed98858",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/6815be0b-65ee-432b-a5ac-02379d53e2c0-2116067497.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171486802?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171486802",
    "portal": "ImmoScout24",
    "titel": "Attraktive 4-Zimmer-Wohnung mit gehobener Ausstattung in Münster-Wolbeck",
    "viertel": "Wolbeck",
@@ -287,10 +299,11 @@
    "grund": "Wolbeck ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "b820856e64157610",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/70a56f79-e114-41bf-a524-f1bc06f6c834-2106315895.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171928675?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171928675",
    "portal": "ImmoScout24",
    "titel": "Lage-Lage-Lage- von Privat nähe Aasee",
    "viertel": "Mecklenbeck",
@@ -304,10 +317,11 @@
    "grund": "Adresse liegt laut Mail in Mecklenbeck (Osterstr.), trotz 'nähe Aasee' im Titel zu weit; Lage vor Anschreiben prüfen.",
    "warnung": "",
    "id": "be2b59f7886e83cb",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/34a293cb-3a0d-41bc-b82d-0d66c2c9921c-2115527183.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/156693975?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_repush&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/156693975",
    "portal": "ImmoScout24",
    "titel": "Charmante 3-Zimmerwohnung mit Südbalkon in MS-Gremmendorf",
    "viertel": "Gremmendorf-Ost",
@@ -321,10 +335,11 @@
    "grund": "Gremmendorf-Ost ist weiter als der Grenzfall Gremmendorf-West und liegt außerhalb der 15-18-Minuten-Zone.",
    "warnung": "",
    "id": "11e2c3e65d778760",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/d64bbd21-9468-4861-bfa0-bc086fc145f7-2111388075.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/169383159?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/169383159",
    "portal": "ImmoScout24",
    "titel": "klassisches Wohnen: 3-Zimmer-Wohnung im Josefsviertel",
    "viertel": "Josefsviertel",
@@ -338,10 +353,11 @@
    "grund": "Josefsviertel liegt zentral nahe Kreuz- und Bahnhofsviertel, 3 Zimmer, 1.325 € warm, Datum unbekannt.",
    "warnung": "",
    "id": "8dce921d3fe4f032",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/a5983961-191d-4246-b2cf-0daf8bc3c415-2061433257.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/170138049?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/170138049",
    "portal": "ImmoScout24",
    "titel": "Neuwertige und großzügige 2-Zimmer-Wohnung in zentrale Lage",
    "viertel": "Hiltrup-Mitte",
@@ -355,10 +371,11 @@
    "grund": "Hiltrup ist zu weit; der Titel sagt 2 Zimmer, die Mail 3 Zimmer.",
    "warnung": "",
    "id": "e19d6355c7c48ca6",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/030319b7-2a87-4bac-a734-78f5055ef7c8-2077463840.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171682471?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_repush&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171682471",
    "portal": "ImmoScout24",
    "titel": "Gemütliche und helle 3-Zimmer-Wohnung mit Terrasse und Einbauküche in sehr guter Lage",
    "viertel": "Hiltrup-Mitte",
@@ -372,10 +389,11 @@
    "grund": "Hiltrup ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "78b939359482991a",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/3197f362-8ed6-465d-9b20-63509e768861-2110393827.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171112252?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_repush&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171112252",
    "portal": "ImmoScout24",
    "titel": "Modernes Wohnen im Zentrum – Grosszügige 3-Zimmer-Wohnung mit Einbauküche, Balkon & Garage (WG-geeignet)",
    "viertel": "Überwasser (Zentrum)",
@@ -389,10 +407,11 @@
    "grund": "Ganz zentral, ausdrücklich WG-geeignet, Garage, 105 m², 1.610 € warm, Datum unbekannt: sofort anschreiben.",
    "warnung": "",
    "id": "210b62268808a053",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/345dfef5-a700-4d07-8800-dce7ce77b3d3-2098210887.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/172058129?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/172058129",
    "portal": "ImmoScout24",
    "titel": "3 Zimmer im Zentrum von Münster",
    "viertel": "Josefsviertel",
@@ -406,10 +425,11 @@
    "grund": "Lage und Größe passen, aber der Preis (~810 € warm) ist für die Lage auffällig niedrig und die Angaben sind unklar.",
    "warnung": "Preis auffällig niedrig: geschätzte Kaltmiete ca. 9,6 €/m² für zentrale Lage, knapp über der Schwelle; Inserat vor Anschreiben prüfen.",
    "id": "c736f22de3c65be7",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/d98128a4-6b12-42bf-b08b-cc3655806729-2118198835.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/172022928?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/172022928",
    "portal": "ImmoScout24",
    "titel": "Alltagstaugliche 6-Zimmer-Wohnung in Münster",
    "viertel": "Kreuzviertel",
@@ -426,7 +446,7 @@
    "gefunden_am": "2026-10-24T22:58:33+02:00"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/127781636?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/127781636",
    "portal": "ImmoScout24",
    "titel": "Helle, freundliche 3ZKBB Wohnung in ruhiger Lage",
    "viertel": "Angelmodde",
@@ -440,10 +460,11 @@
    "grund": "Angelmodde ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "18836599f6f690e6",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/739cbf98-de9c-4bc3-b78e-3369e928e019-1480462193.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171923331?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171923331",
    "portal": "ImmoScout24",
    "titel": "Drei-Zimmer-Neubau in Münster-Roxel",
    "viertel": "Roxel",
@@ -457,10 +478,11 @@
    "grund": "Roxel ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "3e4b9a78a148e83a",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/932b1294-b5b3-4926-8ebc-3fb669782979-2115414644.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171871380?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171871380",
    "portal": "ImmoScout24",
    "titel": "4,5-Zimmer-Wohnung in Münster",
    "viertel": "Berg Fidel",
@@ -477,7 +499,7 @@
    "gefunden_am": "2026-10-24T22:58:33+02:00"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171868373?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171868373",
    "portal": "ImmoScout24",
    "titel": "Geschmackvolle 3-Zimmer-Wohnung, gehobene Ausstattung mit Loggia in Münster-Handorf",
    "viertel": "Handorf",
@@ -491,10 +513,11 @@
    "grund": "Handorf ist zu weit vom Schlossplatz.",
    "warnung": "",
    "id": "c69ddf32ceb3cc54",
-   "gefunden_am": "2026-10-24T22:58:33+02:00"
+   "gefunden_am": "2026-10-24T22:58:33+02:00",
+   "bild": "https://pictures.immobilienscout24.de/listings/6acc26f6-51f0-4745-832c-506c44e4385f-2114373911.jpg/ORIG/resize/540x540%3E/format/jpg/quality/80"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171836419?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_repush&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171836419",
    "portal": "ImmoScout24",
    "titel": "Zuhause mit 3 Zimmern in Münster",
    "viertel": "Hiltrup-Ost",
@@ -511,7 +534,7 @@
    "gefunden_am": "2026-10-24T22:58:33+02:00"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171833645?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171833645",
    "portal": "ImmoScout24",
    "titel": "Wohnen mit Charakter: 4,5-Zimmer-Wohnung in Münster",
    "viertel": "Roxel",
@@ -528,7 +551,7 @@
    "gefunden_am": "2026-10-24T22:58:33+02:00"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171803881?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171803881",
    "portal": "ImmoScout24",
    "titel": "Zuhause mit 3,5 Zimmern in Münster",
    "viertel": "Angelmodde",
@@ -545,7 +568,7 @@
    "gefunden_am": "2026-10-24T22:58:33+02:00"
   },
   {
-   "url": "https://push.search.is24.de/email/expose/171719350?PID=147843681&savedSearchId=202800189&immoTypeId=0&utm_medium=email&utm_source=system&utm_campaign=fulfillment_confirmation&utm_content=fulfillment_item&referrer=ff_listing",
+   "url": "https://www.immobilienscout24.de/expose/171719350",
    "portal": "ImmoScout24",
    "titel": "Wohnen mit Charakter: 3,5-Zimmer-Wohnung in Münster",
    "viertel": "Herz-Jesu",
