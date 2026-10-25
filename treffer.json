@@ -583,7 +583,25 @@
    "warnung": "",
    "id": "6a6356981b104d0b",
    "gefunden_am": "2026-10-24T22:58:33+02:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/2520fcf7-0bf7-4118-8124-fdc58552fcca",
+   "portal": "Immowelt",
+   "titel": "Familienfreundliche 5-Zimmer-Wohnung mit großzügig...",
+   "viertel": "Mauritz (48145)",
+   "zimmer": 5,
+   "qm": 176,
+   "warm": 870,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 12,
+   "score": "B",
+   "grund": "5 Zimmer, 870 € warm und Lage (48145) passen, aber der Preis ist für 176 m² unplausibel niedrig und Einzugsdatum/Befristung fehlen.",
+   "warnung": "Betrugsverdacht: 870 € warm für 176 m² (unter ca. 4,95 €/m² warm) liegt weit unter 9 €/m² kalt; zudem erscheint derselbe Anzeigentext in der Mail ein zweites Mal mit anderem Stadtteil.",
+   "bild": "https://mms.immowelt.de/8/c/1/a/8c1aeb88-c572-43e4-90d3-441539a37372.png?h=400&w=540",
+   "id": "7726e0fa06033e8c",
+   "gefunden_am": "2026-10-25T15:24:16+01:00"
   }
  ],
- "aktualisiert": "2026-10-24T22:58:33+02:00"
+ "aktualisiert": "2026-10-25T15:24:17+01:00"
 }
