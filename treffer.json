@@ -601,7 +601,25 @@
    "bild": "https://mms.immowelt.de/8/c/1/a/8c1aeb88-c572-43e4-90d3-441539a37372.png?h=400&w=540",
    "id": "7726e0fa06033e8c",
    "gefunden_am": "2026-10-25T15:24:16+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/7bd58793-76b0-4534-9557-65338effd783",
+   "portal": "Immowelt",
+   "titel": "TAUSCHWOHNUNG Tauschwohnung",
+   "viertel": "Centrum (48147)",
+   "zimmer": 3,
+   "qm": 83,
+   "warm": 1520,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "X",
+   "grund": "Tauschwohnung, außerdem liegt die Warmmiete (Kalt 1.520 € + ca. 290 € Nebenkosten, geschätzt ca. 1.810 €) über 1.650 €.",
+   "warnung": "",
+   "bild": "https://mms.immowelt.de/7/5/e/e/75ee4ee9-828b-4441-9267-eb456976f12f.webp?h=400&w=540",
+   "id": "b62f8fa43cd485f2",
+   "gefunden_am": "2026-10-25T19:02:40+01:00"
   }
  ],
- "aktualisiert": "2026-10-25T15:24:17+01:00"
+ "aktualisiert": "2026-10-25T19:02:41+01:00"
 }
