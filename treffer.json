@@ -655,7 +655,43 @@
    "bild": "https://pictures.immobilienscout24.de/listings/676181d4-403e-45fc-80f8-f17128be742b-2118793216.png/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
    "id": "4a11a41a9048ce2b",
    "gefunden_am": "2026-10-26T11:06:09+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172069443",
+   "portal": "ImmoScout24",
+   "titel": "Viel Platz für den Alltag: 5-Zimmer-Wohnung in Münster-Kinderhaus",
+   "viertel": "Kinderhaus-West",
+   "zimmer": 5,
+   "qm": 129,
+   "warm": 1635,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 25,
+   "score": "X",
+   "grund": "Kinderhaus liegt zu weit vom Schlossplatz.",
+   "warnung": "",
+   "bild": null,
+   "id": "6b48f978dcd232b6",
+   "gefunden_am": "2026-10-26T23:06:40+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172069748",
+   "portal": "ImmoScout24",
+   "titel": "Zuhause mit 3,5 Zimmern in Münster",
+   "viertel": "Nienberge",
+   "zimmer": 3.5,
+   "qm": 70,
+   "warm": 1400,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 25,
+   "score": "X",
+   "grund": "Nienberge zu weit vom Schlossplatz (Warmmiete 1.330–1.470 € angegeben, 1.400 € ist die Spannenmitte).",
+   "warnung": "",
+   "bild": null,
+   "id": "46731cf027da6ec1",
+   "gefunden_am": "2026-10-26T23:06:40+01:00"
   }
  ],
- "aktualisiert": "2026-10-26T11:06:10+01:00"
+ "aktualisiert": "2026-10-26T23:06:41+01:00"
 }
