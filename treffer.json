@@ -619,7 +619,43 @@
    "bild": "https://mms.immowelt.de/7/5/e/e/75ee4ee9-828b-4441-9267-eb456976f12f.webp?h=400&w=540",
    "id": "b62f8fa43cd485f2",
    "gefunden_am": "2026-10-25T19:02:40+01:00"
+  },
+  {
+   "url": "https://www.wg-gesucht.de/14282915.html?campaign=suchauftrag_detail",
+   "portal": "WG-Gesucht",
+   "titel": "3-Zimmer-Wohnung",
+   "viertel": null,
+   "zimmer": 3,
+   "qm": null,
+   "warm": null,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": null,
+   "score": "B",
+   "grund": "Die Mail nennt nur den Titel; Lage, Miete, Größe und Termin fehlen, deshalb im Inserat prüfen.",
+   "warnung": "",
+   "bild": null,
+   "id": "b1e38b63aa1bb1c2",
+   "gefunden_am": "2026-10-26T11:06:09+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172083657",
+   "portal": "ImmoScout24",
+   "titel": "Tauschwohnung: 80m2 sonnige 3 Zimmer Wohnung in Mecklenbeck",
+   "viertel": "Mecklenbeck",
+   "zimmer": 3,
+   "qm": 80,
+   "warm": 1400,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": null,
+   "score": "X",
+   "grund": "Tauschwohnung, und Mecklenbeck liegt nicht in der Liste der passenden Viertel.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/676181d4-403e-45fc-80f8-f17128be742b-2118793216.png/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "4a11a41a9048ce2b",
+   "gefunden_am": "2026-10-26T11:06:09+01:00"
   }
  ],
- "aktualisiert": "2026-10-25T19:02:41+01:00"
+ "aktualisiert": "2026-10-26T11:06:10+01:00"
 }
