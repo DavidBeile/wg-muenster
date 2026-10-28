@@ -853,7 +853,61 @@
    "bild": null,
    "id": "0fcf7b85209791b1",
    "gefunden_am": "2026-10-27T17:06:42+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172162969",
+   "portal": "ImmoScout24",
+   "titel": "3-Zimmer Wohnung (Windthorststraße 6)",
+   "viertel": "Bahnhof (Bahnhofsviertel)",
+   "zimmer": 3,
+   "qm": 58,
+   "warm": 700,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "A",
+   "grund": "3 Zimmer, 700 € warm und Bahnhofsviertel passen alle sicher; Einzugsdatum und Befristung stehen nicht in der Mail.",
+   "warnung": "Möglicher Betrugsverdacht: 700 € warm für 58 m² im Zentrum ergibt grob 8,5 € Kaltmiete/m² (Kaltmiete nicht angegeben, nur geschätzt), also unter ~9 €/m². Inserat vor dem Anschreiben prüfen.",
+   "bild": null,
+   "id": "c5e09b37f7a1e8dc",
+   "gefunden_am": "2026-10-28T23:30:20+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/61df0157-8cd5-4fd9-8771-e28b42b52f72",
+   "portal": "Immowelt",
+   "titel": "TAUSCHWOHNUNG 4-Zimmer-Wohnung in Münster-Mitte ta...",
+   "viertel": "Mauritz (48155)",
+   "zimmer": 4,
+   "qm": 84,
+   "warm": 984,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "X",
+   "grund": "Tauschwohnung, daher ausgeschlossen.",
+   "warnung": "",
+   "bild": null,
+   "id": "dc5a60aa6a773b26",
+   "gefunden_am": "2026-10-28T23:30:20+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/618bb509-f916-4372-b72d-b58803f6c279",
+   "portal": "Immowelt",
+   "titel": "TAUSCHWOHNUNG Münster-Mitte: Schöne Wohnung zum Ta...",
+   "viertel": "Geist (48153)",
+   "zimmer": 3,
+   "qm": 78,
+   "warm": 1073,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "X",
+   "grund": "Tauschwohnung, daher ausgeschlossen.",
+   "warnung": "",
+   "bild": null,
+   "id": "d9017f25486c3b3e",
+   "gefunden_am": "2026-10-28T23:30:20+01:00"
   }
  ],
- "aktualisiert": "2026-10-27T17:06:43+01:00"
+ "aktualisiert": "2026-10-28T23:30:21+01:00"
 }
