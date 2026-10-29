@@ -907,7 +907,43 @@
    "bild": null,
    "id": "d9017f25486c3b3e",
    "gefunden_am": "2026-10-28T23:30:20+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172175792",
+   "portal": "ImmoScout24",
+   "titel": "Wohnen mit Charakter: Gepflegte 3-Zimmer-Wohnung in Münster-Geist",
+   "viertel": "Geist",
+   "zimmer": 3,
+   "qm": 78.6,
+   "warm": 1201,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "A",
+   "grund": "3 Zimmer, 1.201 € warm, Geist liegt im Radius; Einzugstermin und Befristung stehen nicht in der Mail.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/ab7c952c-58d7-414e-bdd5-cbfbaee861a4-2120792636.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "632a7f1ea65e89f4",
+   "gefunden_am": "2026-10-29T15:28:45+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/c17c2b4e-0fb5-40f1-ae99-e7f40a83e544",
+   "portal": "Immowelt",
+   "titel": "TAUSCHWOHNUNG Münster-Mitte: 3-Zimmer-Wohnung, 85 m²",
+   "viertel": "Mauritz",
+   "zimmer": 3,
+   "qm": 85,
+   "warm": 1497.5,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 12,
+   "score": "X",
+   "grund": "Tauschwohnung, daher ausgeschlossen.",
+   "warnung": "",
+   "bild": "https://mms.immowelt.de/8/7/3/7/87377c91-c413-4751-86e4-d0a7d1b1e556.webp?h=400&w=540",
+   "id": "4c92784521ad2707",
+   "gefunden_am": "2026-10-29T15:28:45+01:00"
   }
  ],
- "aktualisiert": "2026-10-28T23:30:21+01:00"
+ "aktualisiert": "2026-10-29T15:28:46+01:00"
 }
