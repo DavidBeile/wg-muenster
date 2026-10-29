@@ -961,7 +961,25 @@
    "bild": "https://mms.immowelt.de/1/3/1/2/13121456-5099-4b0b-bfa3-399c2b78afc9.jpg?h=400&w=540",
    "id": "3c50c4634e85d72b",
    "gefunden_am": "2026-10-29T17:36:47+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172158637",
+   "portal": "ImmoScout24",
+   "titel": "EG-Wohnung + separates Apartment im Souterrain",
+   "viertel": "Hiltrup-Mitte",
+   "zimmer": 4,
+   "qm": 111,
+   "warm": 1350,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": null,
+   "score": "X",
+   "grund": "Hiltrup liegt zu weit vom Schlossplatz entfernt.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/f46e2ba4-8791-4c8e-83ba-deff9d4c9b8b-2120410307.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "2f9f19ea07bbcbb3",
+   "gefunden_am": "2026-10-29T20:14:09+01:00"
   }
  ],
- "aktualisiert": "2026-10-29T17:36:48+01:00"
+ "aktualisiert": "2026-10-29T20:14:10+01:00"
 }
