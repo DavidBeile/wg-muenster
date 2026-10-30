@@ -1069,7 +1069,25 @@
    "bild": null,
    "id": "d7c2a6e32e21e537",
    "gefunden_am": "2026-10-30T21:09:21+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/34114df2-f4ad-4b0b-aa1c-c927f52b0a13",
+   "portal": "Immowelt",
+   "titel": "3-Zimmer-Wohnung zu vermieten",
+   "viertel": "Geist (48151)",
+   "zimmer": 3,
+   "qm": 97,
+   "warm": 750,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "B",
+   "grund": "Zimmer, Lage (Geist) und Warmmiete passen, aber 750 € warm für 97 m² in Zentrumsnähe sind auffällig günstig (unter 7,70 €/m² warm), daher erst prüfen.",
+   "warnung": "Betrugsverdacht: Warmmiete 750 € bei 97 m² ergibt unter 7,70 €/m² warm, die Kaltmiete liegt also klar unter 9 €/m². Das ist für diese zentrale Lage zu günstig. Möglich ist auch ein Fehler im Inserat.",
+   "bild": "https://mms.immowelt.de/4/c/5/9/4c5951d0-0419-4fb1-a47e-e5088175481f.jpg?h=400&w=540",
+   "id": "7fa4581044471212",
+   "gefunden_am": "2026-10-31T00:18:23+01:00"
   }
  ],
- "aktualisiert": "2026-10-30T21:09:22+01:00"
+ "aktualisiert": "2026-10-31T00:18:24+01:00"
 }
