@@ -979,7 +979,25 @@
    "bild": "https://pictures.immobilienscout24.de/listings/f46e2ba4-8791-4c8e-83ba-deff9d4c9b8b-2120410307.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
    "id": "2f9f19ea07bbcbb3",
    "gefunden_am": "2026-10-29T20:14:09+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172214320",
+   "portal": "ImmoScout24",
+   "titel": "Neuwertige Wohnung mit großer Terrasse Nähe UKM",
+   "viertel": "Gievenbeck (Dieckmannstraße 146)",
+   "zimmer": 3,
+   "qm": 78.23,
+   "warm": 1420,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 17,
+   "score": "B",
+   "grund": "3 Zimmer, 1.420 € warm, große Terrasse, Aufzug und Keller, aber Gievenbeck ist Grenzlage (~15–18 min) und Einzugsdatum sowie Befristung fehlen.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/a05fe3f6-1e35-4a76-8c1c-0abdea71f5ee-2121507597.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "52f775917b8a39d5",
+   "gefunden_am": "2026-10-30T17:52:01+01:00"
   }
  ],
- "aktualisiert": "2026-10-29T20:14:10+01:00"
+ "aktualisiert": "2026-10-30T17:52:02+01:00"
 }
