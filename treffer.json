@@ -1123,7 +1123,43 @@
    "bild": "https://pictures.immobilienscout24.de/listings/d4800f43-b95d-4842-8c85-1ff1e4159b9b-2121806509.png/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
    "id": "7b1508e4e3b5027b",
    "gefunden_am": "2026-10-31T11:05:30+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/150506755",
+   "portal": "ImmoScout24",
+   "titel": "Attraktive 3-Zimmer-Hochparterre-Wohnung in Münster",
+   "viertel": "Coerde",
+   "zimmer": 3,
+   "qm": 86,
+   "warm": 1150,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 17,
+   "score": "B",
+   "grund": "Passt bei Zimmern und Miete, aber Coerde ist Grenzlage; Einzugsdatum und Befristung fehlen.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/e341375c-5533-4566-a648-b777029f6110-1808456194.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "50cf6562fec9a902",
+   "gefunden_am": "2026-10-31T19:46:42+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/26x8kqi5g294",
+   "portal": "Immowelt",
+   "titel": "befristete Dachgeschoss Wohnung am Aasee",
+   "viertel": "Centrum",
+   "zimmer": 3,
+   "qm": 80,
+   "warm": 1320,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "B",
+   "grund": "Lage am Aasee und Miete passen, aber Befristung ohne bekanntes Ende (müsste bis Ende 2028 reichen).",
+   "warnung": "",
+   "bild": null,
+   "id": "47c4539c7b74f6b9",
+   "gefunden_am": "2026-10-31T19:46:42+01:00"
   }
  ],
- "aktualisiert": "2026-10-31T11:05:31+01:00"
+ "aktualisiert": "2026-10-31T19:46:43+01:00"
 }
