@@ -1159,7 +1159,25 @@
    "bild": null,
    "id": "47c4539c7b74f6b9",
    "gefunden_am": "2026-10-31T19:46:42+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172254732",
+   "portal": "ImmoScout24",
+   "titel": "4,5-Zimmer-Wohnung in Münster",
+   "viertel": "Rumphorst",
+   "zimmer": 4.5,
+   "qm": 97,
+   "warm": 1260,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 12,
+   "score": "A",
+   "grund": "4,5 Zimmer, 1.140–1.260 € warm (Obergrenze angesetzt) in Rumphorst, Datum unbekannt.",
+   "warnung": "",
+   "bild": null,
+   "id": "64ec6eedfe8df1f7",
+   "gefunden_am": "2026-11-01T12:06:48+01:00"
   }
  ],
- "aktualisiert": "2026-10-31T19:46:43+01:00"
+ "aktualisiert": "2026-11-01T12:06:49+01:00"
 }
