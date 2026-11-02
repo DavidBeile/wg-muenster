@@ -1483,7 +1483,25 @@
    "bild": null,
    "id": "df6b9fdfbfb306e7",
    "gefunden_am": "2026-11-02T20:07:45+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172300728",
+   "portal": "ImmoScout24",
+   "titel": "Neutor: 3,5-Zimmer-Dachgeschosswohnung",
+   "viertel": "Neutor (Steinfurter Str. 61)",
+   "zimmer": 3.5,
+   "qm": 72,
+   "warm": 1650,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "A",
+   "grund": "Zentrale Lage, 3,5 Zimmer, Warmmiete genau am Limit von 1.650 €, ausdrücklich WG-geeignet; Datum unbekannt.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/2f118fde-5805-4ca5-9153-64f1c2bf173c-2123256893.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "e112155a654f8dc0",
+   "gefunden_am": "2026-11-02T23:14:54+01:00"
   }
  ],
- "aktualisiert": "2026-11-02T20:07:46+01:00"
+ "aktualisiert": "2026-11-02T23:14:55+01:00"
 }
