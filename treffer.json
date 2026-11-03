@@ -1519,7 +1519,43 @@
    "bild": null,
    "id": "9ddc5caf2fde5a8f",
    "gefunden_am": "2026-11-03T12:04:54+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172314785",
+   "portal": "ImmoScout24",
+   "titel": "Moderne 3-Zimmerwohnung in Münster-Geist",
+   "viertel": "Geist",
+   "zimmer": 3,
+   "qm": 65.33,
+   "warm": 1480,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "A",
+   "grund": "3 Zimmer in Geist, Warmmiete 1.480 € unter 1.650 €, Termin unbekannt; sofort anschreiben.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/6d64f3ae-6f1e-4fc3-bac5-41e4e11a6dff-2123541935.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "5744385e47ca1b25",
+   "gefunden_am": "2026-11-03T17:33:45+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172314928",
+   "portal": "ImmoScout24",
+   "titel": "Sanierungsbedürftige Wohnung",
+   "viertel": "Mauritz-West",
+   "zimmer": 3,
+   "qm": 60,
+   "warm": 914,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "B",
+   "grund": "Lage, Zimmerzahl und Preis passen, aber die Wohnung ist sanierungsbedürftig und der Zustand ist unklar.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/bcbd2f53-f390-483c-9f71-47a911f31417-2123536735.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "f76e9c89299e4934",
+   "gefunden_am": "2026-11-03T17:33:45+01:00"
   }
  ],
- "aktualisiert": "2026-11-03T12:04:56+01:00"
+ "aktualisiert": "2026-11-03T17:33:46+01:00"
 }
