@@ -1501,7 +1501,25 @@
    "bild": "https://pictures.immobilienscout24.de/listings/2f118fde-5805-4ca5-9153-64f1c2bf173c-2123256893.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
    "id": "e112155a654f8dc0",
    "gefunden_am": "2026-11-02T23:14:54+01:00"
+  },
+  {
+   "url": null,
+   "portal": "ImmoScout24",
+   "titel": "Platz zum Entfalten: 3-Zimmer-Wohnung in Münster",
+   "viertel": null,
+   "zimmer": 3,
+   "qm": null,
+   "warm": null,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": null,
+   "score": "B",
+   "grund": "Die Mail (1. Nov.) ließ sich nicht vollständig abrufen; nur der Titel ist bekannt. Lage, Miete und Link fehlen und müssen geprüft werden.",
+   "warnung": "",
+   "bild": null,
+   "id": "9ddc5caf2fde5a8f",
+   "gefunden_am": "2026-11-03T12:04:54+01:00"
   }
  ],
- "aktualisiert": "2026-11-02T23:14:55+01:00"
+ "aktualisiert": "2026-11-03T12:04:56+01:00"
 }
