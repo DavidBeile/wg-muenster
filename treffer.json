@@ -1555,7 +1555,25 @@
    "bild": "https://pictures.immobilienscout24.de/listings/bcbd2f53-f390-483c-9f71-47a911f31417-2123536735.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
    "id": "f76e9c89299e4934",
    "gefunden_am": "2026-11-03T17:33:45+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/171989338",
+   "portal": "ImmoScout24",
+   "titel": "Für 2er oder 3er - WG - sanierte u. helle 76m² 4-Zi.-Wng. mit EbK. u. Nordbalkon - Warendorfer Str.",
+   "viertel": "Mauritz-West",
+   "zimmer": 4,
+   "qm": 76,
+   "warm": 1480,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "A",
+   "grund": "4 Zimmer in Mauritz-West, 1.480 € warm, ausdrücklich für eine 2er- oder 3er-WG gedacht (Bonus).",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/1d81727d-bc15-4a7f-b9e5-81311c41de1e-2116749518.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "1aa0f72a951cf163",
+   "gefunden_am": "2026-11-03T23:07:09+01:00"
   }
  ],
- "aktualisiert": "2026-11-03T17:33:46+01:00"
+ "aktualisiert": "2026-11-03T23:07:10+01:00"
 }
