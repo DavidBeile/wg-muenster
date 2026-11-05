@@ -1699,7 +1699,43 @@
    "bild": "https://pictures.immobilienscout24.de/listings/62728b06-ace7-4db4-a97b-0d626fdbbaaa-2124634124.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
    "id": "bf0a225650b171be",
    "gefunden_am": "2026-11-05T05:13:02+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/72c3311d-a2fd-4feb-b0f3-3c6a7c3c30cc",
+   "portal": "Immowelt",
+   "titel": "Modernes Wohnen mit Garten - Erdgeschosswohnung",
+   "viertel": "Mauritz (48155)",
+   "zimmer": 3,
+   "qm": 78.4,
+   "warm": 2024,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 14,
+   "score": "X",
+   "grund": "Kaltmiete 1.750 € liegt schon über dem Warmmiete-Limit, geschätzte Warmmiete ca. 2.024 €.",
+   "warnung": "",
+   "bild": "https://mms.immowelt.de/3/8/5/b/385b9894-d1ed-44a4-95ee-70a22bd35f9b.jpg",
+   "id": "a5284ad2f5eda3e9",
+   "gefunden_am": "2026-11-05T11:07:43+01:00"
+  },
+  {
+   "url": "https://www.immowelt.de/expose/69305b8a-4418-4360-a8d4-6d9b35916602",
+   "portal": "Immowelt",
+   "titel": "TAUSCHWOHNUNG Münster-Mitte: 4,5-Zimmer-Wohnung",
+   "viertel": "Centrum (48147)",
+   "zimmer": 4.5,
+   "qm": 114,
+   "warm": 1599,
+   "warm_geschaetzt": true,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "X",
+   "grund": "Tauschwohnung, kein normales Mietinserat.",
+   "warnung": "",
+   "bild": "https://mms.immowelt.de/0/6/7/9/0679785b-e600-4e2b-b54f-13738f56a0c1.webp",
+   "id": "3a00c02176745d80",
+   "gefunden_am": "2026-11-05T11:07:43+01:00"
   }
  ],
- "aktualisiert": "2026-11-05T05:13:03+01:00"
+ "aktualisiert": "2026-11-05T11:07:44+01:00"
 }
