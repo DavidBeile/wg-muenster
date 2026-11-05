@@ -1645,7 +1645,61 @@
    "bild": null,
    "id": "6fc8d6d5c6a13308",
    "gefunden_am": "2026-11-04T19:47:32+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172355828",
+   "portal": "ImmoScout24",
+   "titel": "Wohnen mit Charakter: 3-Zimmer-Wohnung in Münster",
+   "viertel": "Kreuzviertel (Wichernstraße 13)",
+   "zimmer": 3,
+   "qm": 94,
+   "warm": 1640,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 8,
+   "score": "A",
+   "grund": "Kreuzviertel, 3 Zimmer, 94 m², 1.640 € warm knapp unter dem Limit; Frei-ab-Datum und Befristung stehen nicht in der Mail.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/3ed9c006-7c9d-4c53-a8e3-b0e53912801e-2124328546.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "8628c2bc0e6e3a9c",
+   "gefunden_am": "2026-11-05T05:13:02+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172370223",
+   "portal": "ImmoScout24",
+   "titel": "3-Zimmer-Wohnung mit Balkon in Münster-Neutor",
+   "viertel": "Neutor (Steinfurter Straße 61)",
+   "zimmer": 3,
+   "qm": 83,
+   "warm": 1530,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": 10,
+   "score": "A",
+   "grund": "Neutor, 3 Zimmer, 83 m², 1.530 € warm, Balkon und Einbauküche; Datum und Befristung unbekannt.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/7d29a037-606e-4cbe-b349-f86cb0f77443-2124565158.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "b67cec581682b8e2",
+   "gefunden_am": "2026-11-05T05:13:02+01:00"
+  },
+  {
+   "url": "https://www.immobilienscout24.de/expose/172372994",
+   "portal": "ImmoScout24",
+   "titel": "TAUSCHANGEBOT! Zentrale Wohnung (3ZKDB) gegen kleineres Apartment",
+   "viertel": "Josef",
+   "zimmer": 3,
+   "qm": 61,
+   "warm": 790,
+   "warm_geschaetzt": false,
+   "frei_ab": null,
+   "rad_min": null,
+   "score": "X",
+   "grund": "Tauschwohnung, gesucht wird ein kleineres Apartment, also keine normale Vermietung.",
+   "warnung": "",
+   "bild": "https://pictures.immobilienscout24.de/listings/62728b06-ace7-4db4-a97b-0d626fdbbaaa-2124634124.jpg/ORIG/legacy_thumbnail/640x481/format/jpg/quality/50",
+   "id": "bf0a225650b171be",
+   "gefunden_am": "2026-11-05T05:13:02+01:00"
   }
  ],
- "aktualisiert": "2026-11-04T19:47:33+01:00"
+ "aktualisiert": "2026-11-05T05:13:03+01:00"
 }
